@@ -1,7 +1,7 @@
-<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"/><meta name="theme-color" content="#222"/><meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1"/><meta name="renderer" content="webkit"/><link rel="icon" type="image/ico" sizes="32x32" href="/assets/favicon.ico"/><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"/><link rel="alternate" href="/rss.xml" title="illusory" type="application/rss+xml"><link rel="alternate" href="/atom.xml" title="illusory" type="application/atom+xml"><link rel="alternate" type="application/json" title="illusory" href="https://killer1214.github.io/feed.json"/><link rel="preconnect" href="https://lf9-cdn-tos.bytecdntp.com"/><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"/><link rel="dns-prefetch" href="https://unpkg.com"/><link rel="stylesheet" href="//fonts.geekzu.org/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext"><link rel="stylesheet" href="/css/app.css?v=0.2.1"><script src="https://cdn.staticfile.org/vue/3.2.45/vue.global.prod.js"></script><link rel="canonical" href="https://killer1214.github.io/2023/04/03/c-base-learn/"><title>c++base_learn</title><meta name="generator" content="Hexo 6.3.0"></head><body itemscope itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="container"><header id="header" itemscope itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">c++base_learn</h1><div class="meta"><span class="item" title="Created: 2023-04-03 21:14:48"><span class="icon"><i class="ic i-calendar"></i></span><span class="text">Posted on</span><time itemprop="dateCreated datePublished" datetime="2023-04-03T21:14:48+08:00">2023-04-03</time></span><span class="item" title="Symbols count in article"><span class="icon"><i class="ic i-pen"></i></span><span class="text">Symbols count in article</span><span>5.5k</span><span class="text">words</span></span><span class="item" title="Reading time"><span class="icon"><i class="ic i-clock"></i></span><span class="text">Reading time</span><span>5 mins.</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="Toggle navigation bar"><span class="line"></span><span class="line"></span><span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">testName</a></li></ul><ul class="right" id="rightNav"><li class="item theme" @click="changeThemeByBtn"><i class="ic" :class="{'i-sun': !themeStatus,'i-moon': themeStatus}"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div class="pjax" id="imgs"><ul><li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4fomxoj20zk0m8axp.jpg"></li><li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipewr8iypj20zk0m8b29.jpg"></li><li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li><li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicis3attqj20zk0m8k7l.jpg"></li><li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitht3xtj20zk0m8k5v.jpg"></li><li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipew8gmvyj20zk0m87wh.jpg"></li></ul></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"></use><use xlink:href="#gentle-wave" x="48" y="3"></use><use xlink:href="#gentle-wave" x="48" y="5"></use><use xlink:href="#gentle-wave" x="48" y="7"></use></g></svg></div><main><div class="inner"><div class="pjax" id="main"><div class="article wrap"><div class="breadcrumb" itemListElement itemscope itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i><span><a href="/">Home</a></span></div><article class="post block" itemscope="itemscope" itemtype="http://schema.org/Article" lang="zh"><link itemprop="mainEntityOfPage" href="https://killer1214.github.io/2023/04/03/c-base-learn/"/><span hidden="hidden" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><meta itemprop="image" content="/assets/avatar.jpg"/><meta itemprop="name" content="illusory"/><meta itemprop="description" content=", Starlight spread the universe"/></span><span hidden="hidden" itemprop="publisher" itemscope="itemscope" itemtype="http://schema.org/Organization"><meta itemprop="name" content="illusory"/></span><div class="body md" itemprop="articleBody"><h1 id="c基础"><a class="markdownIt-Anchor" href="#c基础">#</a> c++ 基础</h1>
-<h2 id="1c了解"><a class="markdownIt-Anchor" href="#1c了解">#</a> 1.c++ 了解</h2>
-<h2 id="2数据类型"><a class="markdownIt-Anchor" href="#2数据类型">#</a> 2. 数据类型</h2>
-<h3 id="25-转义字符"><a class="markdownIt-Anchor" href="#25-转义字符">#</a> 2.5 转义字符</h3>
+<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"/><meta name="theme-color" content="#222"/><meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1"/><meta name="renderer" content="webkit"/><link rel="icon" type="image/ico" sizes="32x32" href="/assets/favicon.ico"/><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"/><link rel="alternate" href="/rss.xml" title="illusory" type="application/rss+xml"><link rel="alternate" href="/atom.xml" title="illusory" type="application/atom+xml"><link rel="alternate" type="application/json" title="illusory" href="https://killer1214.github.io/feed.json"/><link rel="preconnect" href="https://lf9-cdn-tos.bytecdntp.com"/><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"/><link rel="dns-prefetch" href="https://unpkg.com"/><link rel="stylesheet" href="//fonts.geekzu.org/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext"><link rel="stylesheet" href="/css/app.css?v=0.2.1"><script src="https://cdn.staticfile.org/vue/3.2.45/vue.global.prod.js"></script><link rel="canonical" href="https://killer1214.github.io/2023/04/03/c-base-learn/"><title>c++base_learn</title><meta name="generator" content="Hexo 6.3.0"></head><body itemscope itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="container"><header id="header" itemscope itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">c++base_learn</h1><div class="meta"><span class="item" title="Created: 2023-04-03 21:14:48"><span class="icon"><i class="ic i-calendar"></i></span><span class="text">Posted on</span><time itemprop="dateCreated datePublished" datetime="2023-04-03T21:14:48+08:00">2023-04-03</time></span><span class="item" title="Symbols count in article"><span class="icon"><i class="ic i-pen"></i></span><span class="text">Symbols count in article</span><span>5.5k</span><span class="text">words</span></span><span class="item" title="Reading time"><span class="icon"><i class="ic i-clock"></i></span><span class="text">Reading time</span><span>5 mins.</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="Toggle navigation bar"><span class="line"></span><span class="line"></span><span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">testName</a></li></ul><ul class="right" id="rightNav"><li class="item theme" @click="changeThemeByBtn"><i class="ic" :class="{'i-sun': !themeStatus,'i-moon': themeStatus}"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div class="pjax" id="imgs"><ul><li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipew28b65j20zk0m8hdt.jpg"></li><li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclwrdwyaj20zk0m8are.jpg"></li><li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclflwv2aj20zk0m84qp.jpg"></li><li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclhnx9glj20zk0m8npd.jpg"></li><li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipew8gmvyj20zk0m87wh.jpg"></li><li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclx29mstj20zk0m8hdt.jpg"></li></ul></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"></use><use xlink:href="#gentle-wave" x="48" y="3"></use><use xlink:href="#gentle-wave" x="48" y="5"></use><use xlink:href="#gentle-wave" x="48" y="7"></use></g></svg></div><main><div class="inner"><div class="pjax" id="main"><div class="article wrap"><div class="breadcrumb" itemListElement itemscope itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i><span><a href="/">Home</a></span></div><article class="post block" itemscope="itemscope" itemtype="http://schema.org/Article" lang="zh"><link itemprop="mainEntityOfPage" href="https://killer1214.github.io/2023/04/03/c-base-learn/"/><span hidden="hidden" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><meta itemprop="image" content="/assets/avatar.jpg"/><meta itemprop="name" content="illusory"/><meta itemprop="description" content=", Starlight spread the universe"/></span><span hidden="hidden" itemprop="publisher" itemscope="itemscope" itemtype="http://schema.org/Organization"><meta itemprop="name" content="illusory"/></span><div class="body md" itemprop="articleBody"><h1 id="c基础"><a class="anchor" href="#c基础">#</a> c++ 基础</h1>
+<h2 id="1c了解"><a class="anchor" href="#1c了解">#</a> 1.c++ 了解</h2>
+<h2 id="2数据类型"><a class="anchor" href="#2数据类型">#</a> 2. 数据类型</h2>
+<h3 id="25-转义字符"><a class="anchor" href="#25-转义字符">#</a> 2.5 转义字符</h3>
 <ul>
 <li>
 <p>\t 水平制表（HT）（跳到下一个 tab 位置，一个 tab 占 8 个位置）009</p>
@@ -13,14 +13,14 @@
 <p>\r 回车（CR）回到当前行开头 013</p>
 </li>
 </ul>
-<h3 id="26字符串型"><a class="markdownIt-Anchor" href="#26字符串型">#</a> 2.6 字符串型</h3>
+<h3 id="26字符串型"><a class="anchor" href="#26字符串型">#</a> 2.6 字符串型</h3>
 <p>作用：表示一串字符</p>
-<h4 id="1c风格字符串char-变量名-字符串值"><a class="markdownIt-Anchor" href="#1c风格字符串char-变量名-字符串值">#</a> 1.C 风格字符串： <code>char 变量名[] = &quot;字符串值&quot;</code></h4>
+<h4 id="1c风格字符串char-变量名-字符串值"><a class="anchor" href="#1c风格字符串char-变量名-字符串值">#</a> 1.C 风格字符串： <code>char 变量名[] = &quot;字符串值&quot;</code></h4>
 <p>例如： <code>char str1[] = &quot;hello,world&quot;;</code></p>
-<h4 id="2c风格字符串string-变量名-字符串值"><a class="markdownIt-Anchor" href="#2c风格字符串string-变量名-字符串值">#</a> 2.c++ 风格字符串： <code>string 变量名 = &quot;字符串值&quot;</code></h4>
+<h4 id="2c风格字符串string-变量名-字符串值"><a class="anchor" href="#2c风格字符串string-变量名-字符串值">#</a> 2.c++ 风格字符串： <code>string 变量名 = &quot;字符串值&quot;</code></h4>
 <p>例如： <code>string str2 = &quot;hello world&quot;;</code></p>
 <p><strong>注意</strong>：需要包含头文件 <code>#include &lt;string&gt;</code></p>
-<h3 id="27布尔类型bool"><a class="markdownIt-Anchor" href="#27布尔类型bool">#</a> 2.7 布尔类型 bool</h3>
+<h3 id="27布尔类型bool"><a class="anchor" href="#27布尔类型bool">#</a> 2.7 布尔类型 bool</h3>
 <p><strong>作用</strong>：布尔数据类型代表真或假的值</p>
 <p>bool 类型只有两个值：</p>
 <ul>
@@ -33,11 +33,11 @@
 </ul>
 <p>bool 类型占 1 个字节大小</p>
 <p>示例： <code>bool flag = true;//true代表真，此时flag==1</code></p>
-<h3 id="28数据的输入"><a class="markdownIt-Anchor" href="#28数据的输入">#</a> 2.8 数据的输入</h3>
+<h3 id="28数据的输入"><a class="anchor" href="#28数据的输入">#</a> 2.8 数据的输入</h3>
 <p>作用：从键盘获取数据</p>
 <p>关键字：cin</p>
 <p>语法： <code>cin &gt;&gt; 变量</code></p>
-<h2 id="3运算符"><a class="markdownIt-Anchor" href="#3运算符">#</a> 3. 运算符</h2>
+<h2 id="3运算符"><a class="anchor" href="#3运算符">#</a> 3. 运算符</h2>
 <p>作用：用于执行代码的运算</p>
 <table>
 <thead>
@@ -65,7 +65,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="31算数运算符"><a class="markdownIt-Anchor" href="#31算数运算符">#</a> 3.1 算数运算符</h3>
+<h3 id="31算数运算符"><a class="anchor" href="#31算数运算符">#</a> 3.1 算数运算符</h3>
 <table>
 <thead>
 <tr>
@@ -131,15 +131,15 @@
 <td>a=3;b=2;</td>
 </tr>
 <tr>
-<td>–</td>
+<td>--</td>
 <td>前置递减</td>
-<td>a=2;b=–a;</td>
+<td>a=2;b=--a;</td>
 <td>a=1;b=1;</td>
 </tr>
 <tr>
-<td>–</td>
+<td>--</td>
 <td>后置递减</td>
-<td>a=2;b=a–;</td>
+<td>a=2;b=a--;</td>
 <td>a=1;b=2;</td>
 </tr>
 </tbody>
@@ -162,16 +162,16 @@
 <p>前置：先对变量处理，然后进行表达式运算；后置：先进行表达式运算，然后对变量处理</p>
 </li>
 </ul>
-<h3 id="32赋值运算符"><a class="markdownIt-Anchor" href="#32赋值运算符">#</a> 3.2 赋值运算符</h3>
+<h3 id="32赋值运算符"><a class="anchor" href="#32赋值运算符">#</a> 3.2 赋值运算符</h3>
 <p>作用：将表达式的值赋给变量</p>
 <p>运算符： <code>=，+=，-=，*=，/=，%=</code></p>
-<h3 id="33比较运算符"><a class="markdownIt-Anchor" href="#33比较运算符">#</a> 3.3 比较运算符</h3>
+<h3 id="33比较运算符"><a class="anchor" href="#33比较运算符">#</a> 3.3 比较运算符</h3>
 <p>作用：用于表达式的比较，并返回一个真值（1）或假值（0）</p>
 <p>运算符： <code>==，!=，&lt;，&gt;，&lt;=，&gt;=</code></p>
-<h3 id="34逻辑运算符"><a class="markdownIt-Anchor" href="#34逻辑运算符">#</a> 3.4 逻辑运算符</h3>
+<h3 id="34逻辑运算符"><a class="anchor" href="#34逻辑运算符">#</a> 3.4 逻辑运算符</h3>
 <p>作用：用于根据表达式的值返回真值或假值</p>
 <p>运算符： <code>!,&amp;&amp;,||</code></p>
-<h2 id="4程序流程结构"><a class="markdownIt-Anchor" href="#4程序流程结构">#</a> 4. 程序流程结构</h2>
+<h2 id="4程序流程结构"><a class="anchor" href="#4程序流程结构">#</a> 4. 程序流程结构</h2>
 <p>顺序结构，选择结构，循环结构</p>
 <ul>
 <li>
@@ -184,8 +184,8 @@
 <p>循环结构：依据条件是否满足，循环多次执行某段代码</p>
 </li>
 </ul>
-<h3 id="41选择结构"><a class="markdownIt-Anchor" href="#41选择结构">#</a> 4.1 选择结构</h3>
-<h4 id="411-if语句"><a class="markdownIt-Anchor" href="#411-if语句">#</a> 4.1.1 if 语句</h4>
+<h3 id="41选择结构"><a class="anchor" href="#41选择结构">#</a> 4.1 选择结构</h3>
+<h4 id="411-if语句"><a class="anchor" href="#411-if语句">#</a> 4.1.1 if 语句</h4>
 <p>if 语句的三种形式：</p>
 <ul>
 <li>
@@ -198,16 +198,15 @@
 <p>多条件的 if 语句</p>
 </li>
 </ul>
-<h4 id="412三目运算符"><a class="markdownIt-Anchor" href="#412三目运算符">#</a> 4.1.2 三目运算符</h4>
+<h4 id="412三目运算符"><a class="anchor" href="#412三目运算符">#</a> 4.1.2 三目运算符</h4>
 <p>作用：通过三目运算符实现简单的判断</p>
 <p>语法： <code>表达式1?表达式2:表达式3</code></p>
 <p>如果表达式 1 为<strong>真</strong>，则执行<strong>表达式 2</strong>，并返回表达式 2 的结果</p>
 <p>如果表达式 1 为<strong>假</strong>，则执行<strong>表达式 3</strong>，并返回表达式 3 的结果</p>
 <p>补充：在 C++ 中三目运算符返回的是变量，可以继续赋值</p>
 <p>例如： <code>(a &gt; b ? a : b) = 100</code></p>
-<h4 id="413switch语句"><a class="markdownIt-Anchor" href="#413switch语句">#</a> 4.1.3switch 语句</h4>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(表达式)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">case</span> 结果<span class="number">1</span>:执行语句;<span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> 结果<span class="number">2</span>:执行语句;<span class="keyword">break</span>;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">default</span>:执行语句;<span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>注意：case 里如果没有 break，那么程序会一直向下执行</p>
+<h4 id="413switch语句"><a class="anchor" href="#413switch语句">#</a> 4.1.3switch 语句</h4>
+<figure class="highlight cpp"><figcaption data-lang="C++"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">switch</span><span class="token punctuation">(</span>表达式<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token keyword">case</span> 结果<span class="token number">1</span><span class="token operator">:</span>执行语句<span class="token punctuation">;</span><span class="token keyword">break</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token keyword">case</span> 结果<span class="token number">2</span><span class="token operator">:</span>执行语句<span class="token punctuation">;</span><span class="token keyword">break</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token keyword">default</span><span class="token operator">:</span>执行语句<span class="token punctuation">;</span><span class="token keyword">break</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p>注意：case 里如果没有 break，那么程序会一直向下执行</p>
 <p><strong>if 和 switch 区别：</strong></p>
 <ul>
 <li>
@@ -217,20 +216,18 @@
 <p>switch 优点，结构清晰执行效率高</p>
 </li>
 </ul>
-<h3 id="42循环结构"><a class="markdownIt-Anchor" href="#42循环结构">#</a> 4.2 循环结构</h3>
-<h4 id="421while循环语句"><a class="markdownIt-Anchor" href="#421while循环语句">#</a> 4.2.1while 循环语句</h4>
+<h3 id="42循环结构"><a class="anchor" href="#42循环结构">#</a> 4.2 循环结构</h3>
+<h4 id="421while循环语句"><a class="anchor" href="#421while循环语句">#</a> 4.2.1while 循环语句</h4>
 <p>语法： <code>while(循环条件)&#123;循环语句&#125;</code></p>
 <p>只要循环条件结果为真，就执行循环语句</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//依据当前系统时间来添加随机数种子</span></span><br><span class="line">    <span class="built_in">srand</span>((<span class="type">unsigned</span> <span class="type">int</span>)<span class="built_in">time</span>(<span class="literal">NULL</span>));<span class="comment">//需要ctime头文件</span></span><br><span class="line">    <span class="type">int</span> num = <span class="built_in">rand</span>() % <span class="number">100</span> + <span class="number">1</span>;<span class="comment">//生成1~100随机数</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="422-dowhile循环语句"><a class="markdownIt-Anchor" href="#422-dowhile循环语句">#</a> 4.2.2 do…while 循环语句</h4>
+<figure class="highlight cpp"><figcaption data-lang="C++"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;ctime></span></span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token comment">// 依据当前系统时间来添加随机数种子</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token function">srand</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">unsigned</span> <span class="token keyword">int</span><span class="token punctuation">)</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 需要 ctime 头文件</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token function">rand</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">100</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span><span class="token comment">// 生成 1~100 随机数</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><h4 id="422-dowhile循环语句"><a class="anchor" href="#422-dowhile循环语句">#</a> 4.2.2 do...while 循环语句</h4>
 <p>语法： <code>do&#123;循环语句&#125;while(循环条件)</code></p>
-<p>注意：与 while 的区别在于 do…while 会先执行一次循环语句，再判断循环条件</p>
-<h4 id="423-for循环语句"><a class="markdownIt-Anchor" href="#423-for循环语句">#</a> 4.2.3 for 循环语句</h4>
+<p>注意：与 while 的区别在于 do...while 会先执行一次循环语句，再判断循环条件</p>
+<h4 id="423-for循环语句"><a class="anchor" href="#423-for循环语句">#</a> 4.2.3 for 循环语句</h4>
 <p>语法： <code>for(起始表达式;条件表达式;末尾循环体)&#123;循环语句&#125;</code></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*敲桌子，1~100内，各位7(mod10=7)，</span></span><br><span class="line"><span class="comment">十位7(/10 = 7)，</span></span><br><span class="line"><span class="comment">或者是7的倍数(mod7=0)，</span></span><br><span class="line"><span class="comment">则输出敲桌子*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>;i &lt;= <span class="number">100</span>;++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(i%<span class="number">7</span>==<span class="number">0</span>||i%<span class="number">10</span>==<span class="number">7</span>||i/<span class="number">10</span>==<span class="number">7</span>)&#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;敲桌子&quot;</span> &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            cout &lt;&lt; i &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="424嵌套循环"><a class="markdownIt-Anchor" href="#424嵌套循环">#</a> 4.2.4 嵌套循环</h4>
-<h3 id="43跳转语句"><a class="markdownIt-Anchor" href="#43跳转语句">#</a> 4.3 跳转语句</h3>
-<h4 id="431-break语句"><a class="markdownIt-Anchor" href="#431-break语句">#</a> 4.3.1 break 语句</h4>
+<figure class="highlight cpp"><figcaption data-lang="C++"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment">/* 敲桌子，1~100 内，各位 7 (mod10=7)，</pre></td></tr><tr><td data-num="2"></td><td><pre>十位 7 (/10 = 7)，</pre></td></tr><tr><td data-num="3"></td><td><pre>或者是 7 的倍数 (mod7=0)，</pre></td></tr><tr><td data-num="4"></td><td><pre>则输出敲桌子 */</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i <span class="token operator">&lt;=</span> <span class="token number">100</span><span class="token punctuation">;</span><span class="token operator">++</span>i<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="10"></td><td><pre>        <span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">%</span><span class="token number">7</span><span class="token operator">==</span><span class="token number">0</span><span class="token operator">||</span>i<span class="token operator">%</span><span class="token number">10</span><span class="token operator">==</span><span class="token number">7</span><span class="token operator">||</span>i<span class="token operator">/</span><span class="token number">10</span><span class="token operator">==</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"敲桌子"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>        <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="13"></td><td><pre>        <span class="token keyword">else</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="14"></td><td><pre>            cout <span class="token operator">&lt;&lt;</span> i <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="15"></td><td><pre>        <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="16"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="17"></td><td><pre>    <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"pause"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="18"></td><td><pre>    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="19"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><h4 id="424嵌套循环"><a class="anchor" href="#424嵌套循环">#</a> 4.2.4 嵌套循环</h4>
+<h3 id="43跳转语句"><a class="anchor" href="#43跳转语句">#</a> 4.3 跳转语句</h3>
+<h4 id="431-break语句"><a class="anchor" href="#431-break语句">#</a> 4.3.1 break 语句</h4>
 <p>作用：跳出选择结构或者循环结构</p>
 <p>break 使用的时机：</p>
 <ul>
@@ -244,20 +241,19 @@
 <p>嵌套循环中，跳出最近的内层循环语句</p>
 </li>
 </ul>
-<h4 id="432-continue语句"><a class="markdownIt-Anchor" href="#432-continue语句">#</a> 4.3.2 continue 语句</h4>
+<h4 id="432-continue语句"><a class="anchor" href="#432-continue语句">#</a> 4.3.2 continue 语句</h4>
 <p>作用：在循环语句中，跳过本次循环中余下尚未执行的语句，继续执行下一次循环</p>
-<h4 id="433-goto语句"><a class="markdownIt-Anchor" href="#433-goto语句">#</a> 4.3.3 goto 语句</h4>
+<h4 id="433-goto语句"><a class="anchor" href="#433-goto语句">#</a> 4.3.3 goto 语句</h4>
 <p>作用：可以<strong>无条件</strong>跳转语句</p>
 <p>语法： <code>goto 标记;</code> (标记习惯用全大写)</p>
 <p>解释：如果标记的名称存在，执行到 goto 语句时，会跳转到标记的位置</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">goto</span> FLAG;</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">FLAG:</span><br><span class="line">...</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-<h2 id="5-数组"><a class="markdownIt-Anchor" href="#5-数组">#</a> 5 数组</h2>
-<h3 id="51-概述"><a class="markdownIt-Anchor" href="#51-概述">#</a> 5.1 概述</h3>
+<figure class="highlight cpp"><figcaption data-lang="C++"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">goto</span> FLAG<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></pre></td></tr><tr><td data-num="4"></td><td><pre>FLAG<span class="token operator">:</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></pre></td></tr></table></figure><h2 id="5-数组"><a class="anchor" href="#5-数组">#</a> 5 数组</h2>
+<h3 id="51-概述"><a class="anchor" href="#51-概述">#</a> 5.1 概述</h3>
 <p>数组，就是一个集合，里面存放了相同类型的数据元素</p>
 <p><strong>特点 1</strong>：数组中的每个数据元素都是相同的数据类型</p>
 <p><strong>特点 2</strong>：数组是由连续的内存位置组成的</p>
-<h3 id="52-一维数组"><a class="markdownIt-Anchor" href="#52-一维数组">#</a> 5.2 一维数组</h3>
-<h4 id="521-一维数组定义方式"><a class="markdownIt-Anchor" href="#521-一维数组定义方式">#</a> 5.2.1 一维数组定义方式</h4>
+<h3 id="52-一维数组"><a class="anchor" href="#52-一维数组">#</a> 5.2 一维数组</h3>
+<h4 id="521-一维数组定义方式"><a class="anchor" href="#521-一维数组定义方式">#</a> 5.2.1 一维数组定义方式</h4>
 <p>三种方式：</p>
 <ol>
 <li>
@@ -270,7 +266,7 @@
 <p><code>数据类型 数组名[] = &#123;值1, 值2...&#125;;</code></p>
 </li>
 </ol>
-<h4 id="522-一维数组数组名"><a class="markdownIt-Anchor" href="#522-一维数组数组名">#</a> 5.2.2 一维数组数组名</h4>
+<h4 id="522-一维数组数组名"><a class="anchor" href="#522-一维数组数组名">#</a> 5.2.2 一维数组数组名</h4>
 <p>用途：</p>
 <ol>
 <li>
@@ -280,7 +276,7 @@
 <p>获取数组在内存中的首地址 <code>cout &lt;&lt; 数组名</code></p>
 </li>
 </ol>
-<h4 id="523-冒泡排序"><a class="markdownIt-Anchor" href="#523-冒泡排序">#</a> 5.2.3 冒泡排序</h4>
+<h4 id="523-冒泡排序"><a class="anchor" href="#523-冒泡排序">#</a> 5.2.3 冒泡排序</h4>
 <ul>
 <li>
 <p>总排序轮数 = 元素个数 - 1</p>
@@ -289,8 +285,8 @@
 <p>内层循环对比次数 = 元素个数 - 当前轮数 - 1</p>
 </li>
 </ul>
-<h3 id="53-二维数组"><a class="markdownIt-Anchor" href="#53-二维数组">#</a> 5.3 二维数组</h3>
-<h4 id="531-二维数组定义方式"><a class="markdownIt-Anchor" href="#531-二维数组定义方式">#</a> 5.3.1 二维数组定义方式</h4>
+<h3 id="53-二维数组"><a class="anchor" href="#53-二维数组">#</a> 5.3 二维数组</h3>
+<h4 id="531-二维数组定义方式"><a class="anchor" href="#531-二维数组定义方式">#</a> 5.3.1 二维数组定义方式</h4>
 <p>四种定义方式：</p>
 <ol>
 <li>
@@ -306,7 +302,7 @@
 <p><code>数据类型 数组名[ ][列数]=&#123;数据1,数据2,数据3,数据4&#125;;</code></p>
 </li>
 </ol>
-<h4 id="532-二维数组数组名"><a class="markdownIt-Anchor" href="#532-二维数组数组名">#</a> 5.3.2 二维数组数组名</h4>
+<h4 id="532-二维数组数组名"><a class="anchor" href="#532-二维数组数组名">#</a> 5.3.2 二维数组数组名</h4>
 <p>用途：</p>
 <ol>
 <li>
@@ -316,11 +312,11 @@
 <p>获取二维数组首地址  <code>cout &lt;&lt; 数组名</code></p>
 </li>
 </ol>
-<h2 id="6函数"><a class="markdownIt-Anchor" href="#6函数">#</a> 6. 函数</h2>
-<h3 id="61-概述"><a class="markdownIt-Anchor" href="#61-概述">#</a> 6.1 概述</h3>
+<h2 id="6函数"><a class="anchor" href="#6函数">#</a> 6. 函数</h2>
+<h3 id="61-概述"><a class="anchor" href="#61-概述">#</a> 6.1 概述</h3>
 <p>作用： 将一段经常使用的代码封装起来，减少重复代码</p>
 <p>一个较大的程序，一般分为若干个程序块，每个模块实现特定的功能。</p>
-<h3 id="62-函数的定义"><a class="markdownIt-Anchor" href="#62-函数的定义">#</a> 6.2 函数的定义</h3>
+<h3 id="62-函数的定义"><a class="anchor" href="#62-函数的定义">#</a> 6.2 函数的定义</h3>
 <p>函数的定义一般主要有五个步骤：</p>
 <ol>
 <li>
@@ -339,10 +335,10 @@
 <p>return 表达式</p>
 </li>
 </ol>
-<h3 id="63-函数的调用"><a class="markdownIt-Anchor" href="#63-函数的调用">#</a> 6.3 函数的调用</h3>
+<h3 id="63-函数的调用"><a class="anchor" href="#63-函数的调用">#</a> 6.3 函数的调用</h3>
 <p>功能：使用定义好的函数</p>
 <p>语法： <code>函数名(参数)</code></p>
-<h3 id="64-值传递"><a class="markdownIt-Anchor" href="#64-值传递">#</a> 6.4 值传递</h3>
+<h3 id="64-值传递"><a class="anchor" href="#64-值传递">#</a> 6.4 值传递</h3>
 <ul>
 <li>
 <p>值传递：函数调用时实参将数值传入给形参</p>
@@ -351,7 +347,7 @@
 <p>值传递时，如果形参发生改变，并不会影响实参</p>
 </li>
 </ul>
-<h3 id="65-函数的常见样式"><a class="markdownIt-Anchor" href="#65-函数的常见样式">#</a> 6.5 函数的常见样式</h3>
+<h3 id="65-函数的常见样式"><a class="anchor" href="#65-函数的常见样式">#</a> 6.5 函数的常见样式</h3>
 <ol>
 <li>
 <p>无参无返</p>
@@ -366,13 +362,13 @@
 <p>有参有返</p>
 </li>
 </ol>
-<h3 id="66-函数的声明"><a class="markdownIt-Anchor" href="#66-函数的声明">#</a> 6.6 函数的声明</h3>
+<h3 id="66-函数的声明"><a class="anchor" href="#66-函数的声明">#</a> 6.6 函数的声明</h3>
 <p>作用：告诉编译器函数名称以及如何调用函数。函数的实际主题可以单独定义</p>
 <ul>
 <li>函数的声明可以很多次 (没有必要)，但是函数的定义只能有一次</li>
 </ul>
 <p>示例： <code>int max(int a, int b);</code></p>
-<h3 id="67-函数的份文件编写"><a class="markdownIt-Anchor" href="#67-函数的份文件编写">#</a> 6.7 函数的份文件编写</h3>
+<h3 id="67-函数的份文件编写"><a class="anchor" href="#67-函数的份文件编写">#</a> 6.7 函数的份文件编写</h3>
 <p>作用：让代码结构更加清晰</p>
 <p>一般四个步骤：</p>
 <ol>
@@ -389,8 +385,8 @@
 <p>在源文件中写函数的定义，关联头文件 <code>include &quot;头文件名&quot;</code></p>
 </li>
 </ol>
-<h2 id="7指针"><a class="markdownIt-Anchor" href="#7指针">#</a> 7. 指针</h2>
-<h3 id="71-指针的基本概念"><a class="markdownIt-Anchor" href="#71-指针的基本概念">#</a> 7.1 指针的基本概念</h3>
+<h2 id="7指针"><a class="anchor" href="#7指针">#</a> 7. 指针</h2>
+<h3 id="71-指针的基本概念"><a class="anchor" href="#71-指针的基本概念">#</a> 7.1 指针的基本概念</h3>
 <p>指针的作用：可以通过指针间接访问内存</p>
 <ul>
 <li>
@@ -400,13 +396,13 @@
 <p>可以利用指针变量保存地址</p>
 </li>
 </ul>
-<h3 id="72-指针变量的定义和使用"><a class="markdownIt-Anchor" href="#72-指针变量的定义和使用">#</a> 7.2 指针变量的定义和使用</h3>
+<h3 id="72-指针变量的定义和使用"><a class="anchor" href="#72-指针变量的定义和使用">#</a> 7.2 指针变量的定义和使用</h3>
 <p>指针变量定义语法： <code>数据类型 *变量名;</code></p>
 <p>使用：通过解引用的方式来找到指针指向的内存，如 <code>*p</code></p>
-<h3 id="73-指针所占用内存空间"><a class="markdownIt-Anchor" href="#73-指针所占用内存空间">#</a> 7.3 指针所占用内存空间</h3>
+<h3 id="73-指针所占用内存空间"><a class="anchor" href="#73-指针所占用内存空间">#</a> 7.3 指针所占用内存空间</h3>
 <p>在 32 位操作系统下：占用 4 个字节空间</p>
 <p>在 64 位操作系统下：占用 8 个字节空间</p>
-<h3 id="74-空指针和野指针"><a class="markdownIt-Anchor" href="#74-空指针和野指针">#</a> 7.4 空指针和野指针</h3>
+<h3 id="74-空指针和野指针"><a class="anchor" href="#74-空指针和野指针">#</a> 7.4 空指针和野指针</h3>
 <p>空指针：指针变量指向内存中编号为 0 的空间</p>
 <p>用途：初始化指针变量</p>
 <p>注意：空指针指向的内存是<strong>不可以</strong>访问的（0~255 之间的内存编号是系统占用的）</p>
@@ -414,14 +410,14 @@
 <blockquote>
 <p>在程序中，尽量避免出现野指针</p>
 </blockquote>
-<h3 id="75-const修饰指针"><a class="markdownIt-Anchor" href="#75-const修饰指针">#</a> 7.5 const 修饰指针</h3>
+<h3 id="75-const修饰指针"><a class="anchor" href="#75-const修饰指针">#</a> 7.5 const 修饰指针</h3>
 <p>const 修饰指针有三种情况：</p>
 <ol>
 <li>
-<p>const 修饰指针 — 常量指针</p>
+<p>const 修饰指针 --- 常量指针</p>
 </li>
 <li>
-<p>const 修饰常量 — 指针常量</p>
+<p>const 修饰常量 --- 指针常量</p>
 </li>
 <li>
 <p>const 既修饰指针，又修饰常量</p>
@@ -433,10 +429,10 @@
 </blockquote>
 <ul class="task-list">
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> *p = 20; 错误，指针指向的值不可以修改</label></p>
+<p><input type="checkbox" id="cbx_0" disabled="true" /><label for="cbx_0"> *p = 20; 错误，指针指向的值不可以修改</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_1" checked="true" disabled="true"><label for="cbx_1"> p = &amp;b; 正确，指针的指向可以修改</label></p>
+<p><input type="checkbox" id="cbx_1" checked="true" disabled="true" /><label for="cbx_1"> p = &amp;b; 正确，指针的指向可以修改</label></p>
 </li>
 </ul>
 <p>指针常量： <code>int * const p = &amp;a;</code></p>
@@ -445,10 +441,10 @@
 </blockquote>
 <ul class="task-list">
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_2" checked="true" disabled="true"><label for="cbx_2"> *p = 20; 正确，指针指向的值可以修改</label></p>
+<p><input type="checkbox" id="cbx_2" checked="true" disabled="true" /><label for="cbx_2"> *p = 20; 正确，指针指向的值可以修改</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> p = &amp;b; 错误，指针的指向不可以修改</label></p>
+<p><input type="checkbox" id="cbx_3" disabled="true" /><label for="cbx_3"> p = &amp;b; 错误，指针的指向不可以修改</label></p>
 </li>
 </ul>
 <p>const 既修饰指针，又修饰常量： <code>const int * const p = &amp;a;</code></p>
@@ -456,15 +452,15 @@
 <p>指针的指向和指针的值都不可以修改</p>
 </blockquote>
 <p>上述两种操作都是错误的</p>
-<h3 id="76-指针和数组"><a class="markdownIt-Anchor" href="#76-指针和数组">#</a> 7.6 指针和数组</h3>
+<h3 id="76-指针和数组"><a class="anchor" href="#76-指针和数组">#</a> 7.6 指针和数组</h3>
 <p>利用指针访问数组中元素</p>
 <p>数组名本身就是一个指针</p>
-<h3 id="77-指针和函数"><a class="markdownIt-Anchor" href="#77-指针和函数">#</a> 7.7 指针和函数</h3>
+<h3 id="77-指针和函数"><a class="anchor" href="#77-指针和函数">#</a> 7.7 指针和函数</h3>
 <p>作用：利用指针作函数参数，可以修改实参的值</p>
 <blockquote>
 <p>地址传递</p>
 </blockquote>
-<h3 id="78-指针-数组-函数"><a class="markdownIt-Anchor" href="#78-指针-数组-函数">#</a> 7.8 指针、数组、函数</h3>
+<h3 id="78-指针-数组-函数"><a class="anchor" href="#78-指针-数组-函数">#</a> 7.8 指针、数组、函数</h3>
 <p>封装一个函数，利用冒泡排序，实现对整型数组的升序排序</p>
 </div><footer><div class="meta"><span class="icon"><i class="ic i-eye"></i></span><span>此文章已被阅读次数:</span><span class="waline-pageview-count" id="twikoo_visitors" data-path="2023/04/03/c-base-learn/">正在加载...</span><span class="item"><span class="icon"><i class="ic i-calendar-check"></i></span><span class="text">Edited on</span><time title="Modified: 2023-04-03 21:15:15" itemprop="dateModified" datetime="2023-04-03T21:15:15+08:00">2023-04-03</time></span><script type="module" data-pjax="data-pjax">import { pageviewCount } from 'https://unpkg.com/@waline/client/dist/pageview.mjs';
 
@@ -473,7 +469,7 @@ pageviewCount({
     serverURL: '',
     path: path,
 });
-</script></div><div class="reward"><button><i class="ic i-heartbeat"></i>Donate</button><p>Give me a cup of [coffee]~(￣▽￣)~*</p><div id="qr"><div><img data-src="/assets/wechatpay.png" alt="illusory WeChat Pay"/><p>WeChat Pay</p></div><div><img data-src="/assets/alipay.png" alt="illusory Alipay"/><p>Alipay</p></div></div></div><div id="copyright"><ul><li class="author"><strong>Post author: </strong>illusory<i class="ic i-at"><em>@</em></i>illusory</li><li class="link"><strong>Post link: </strong><a href="https://killer1214.github.io/2023/04/03/c-base-learn/" title="c++base_learn">https://killer1214.github.io/2023/04/03/c-base-learn/</a></li><li class="license"><strong>Copyright Notice: </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</a> unless stating additionally.</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/2023/04/03/hello-world/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicit31ffoj20zk0m8naf.jpg" title="Hello World"><span class="type">Previous Post</span><span class="category"><i class="ic i-flag"></i>undefined</span><h3>Hello World</h3></a></div><div class="item right"></div></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="Contents"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#c%E5%9F%BA%E7%A1%80"><span class="toc-number">1.</span> <span class="toc-text"> c++ 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1c%E4%BA%86%E8%A7%A3"><span class="toc-number">1.1.</span> <span class="toc-text"> 1.c++ 了解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.2.</span> <span class="toc-text"> 2. 数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#25-%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="toc-number">1.2.1.</span> <span class="toc-text"> 2.5 转义字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#26%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9E%8B"><span class="toc-number">1.2.2.</span> <span class="toc-text"> 2.6 字符串型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1c%E9%A3%8E%E6%A0%BC%E5%AD%97%E7%AC%A6%E4%B8%B2char-%E5%8F%98%E9%87%8F%E5%90%8D-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%80%BC"><span class="toc-number">1.2.2.1.</span> <span class="toc-text"> 1.C 风格字符串： char 变量名[] &#x3D; &quot;字符串值&quot;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2c%E9%A3%8E%E6%A0%BC%E5%AD%97%E7%AC%A6%E4%B8%B2string-%E5%8F%98%E9%87%8F%E5%90%8D-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%80%BC"><span class="toc-number">1.2.2.2.</span> <span class="toc-text"> 2.c++ 风格字符串： string 变量名 &#x3D; &quot;字符串值&quot;</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#27%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8Bbool"><span class="toc-number">1.2.3.</span> <span class="toc-text"> 2.7 布尔类型 bool</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#28%E6%95%B0%E6%8D%AE%E7%9A%84%E8%BE%93%E5%85%A5"><span class="toc-number">1.2.4.</span> <span class="toc-text"> 2.8 数据的输入</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.3.</span> <span class="toc-text"> 3. 运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#31%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.3.1.</span> <span class="toc-text"> 3.1 算数运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#32%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.3.2.</span> <span class="toc-text"> 3.2 赋值运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#33%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.3.3.</span> <span class="toc-text"> 3.3 比较运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#34%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.3.4.</span> <span class="toc-text"> 3.4 逻辑运算符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E7%A8%8B%E5%BA%8F%E6%B5%81%E7%A8%8B%E7%BB%93%E6%9E%84"><span class="toc-number">1.4.</span> <span class="toc-text"> 4. 程序流程结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#41%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84"><span class="toc-number">1.4.1.</span> <span class="toc-text"> 4.1 选择结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#411-if%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.4.1.1.</span> <span class="toc-text"> 4.1.1 if 语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#412%E4%B8%89%E7%9B%AE%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.4.1.2.</span> <span class="toc-text"> 4.1.2 三目运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#413switch%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.4.1.3.</span> <span class="toc-text"> 4.1.3switch 语句</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#42%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="toc-number">1.4.2.</span> <span class="toc-text"> 4.2 循环结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#421while%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.4.2.1.</span> <span class="toc-text"> 4.2.1while 循环语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#422-dowhile%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.4.2.2.</span> <span class="toc-text"> 4.2.2 do…while 循环语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#423-for%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.4.2.3.</span> <span class="toc-text"> 4.2.3 for 循环语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#424%E5%B5%8C%E5%A5%97%E5%BE%AA%E7%8E%AF"><span class="toc-number">1.4.2.4.</span> <span class="toc-text"> 4.2.4 嵌套循环</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#43%E8%B7%B3%E8%BD%AC%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.4.3.</span> <span class="toc-text"> 4.3 跳转语句</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#431-break%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.4.3.1.</span> <span class="toc-text"> 4.3.1 break 语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#432-continue%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.4.3.2.</span> <span class="toc-text"> 4.3.2 continue 语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#433-goto%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.4.3.3.</span> <span class="toc-text"> 4.3.3 goto 语句</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%95%B0%E7%BB%84"><span class="toc-number">1.5.</span> <span class="toc-text"> 5 数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#51-%E6%A6%82%E8%BF%B0"><span class="toc-number">1.5.1.</span> <span class="toc-text"> 5.1 概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#52-%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="toc-number">1.5.2.</span> <span class="toc-text"> 5.2 一维数组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#521-%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84%E5%AE%9A%E4%B9%89%E6%96%B9%E5%BC%8F"><span class="toc-number">1.5.2.1.</span> <span class="toc-text"> 5.2.1 一维数组定义方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#522-%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84%E6%95%B0%E7%BB%84%E5%90%8D"><span class="toc-number">1.5.2.2.</span> <span class="toc-text"> 5.2.2 一维数组数组名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#523-%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F"><span class="toc-number">1.5.2.3.</span> <span class="toc-text"> 5.2.3 冒泡排序</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#53-%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="toc-number">1.5.3.</span> <span class="toc-text"> 5.3 二维数组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#531-%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E5%AE%9A%E4%B9%89%E6%96%B9%E5%BC%8F"><span class="toc-number">1.5.3.1.</span> <span class="toc-text"> 5.3.1 二维数组定义方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#532-%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E6%95%B0%E7%BB%84%E5%90%8D"><span class="toc-number">1.5.3.2.</span> <span class="toc-text"> 5.3.2 二维数组数组名</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E5%87%BD%E6%95%B0"><span class="toc-number">1.6.</span> <span class="toc-text"> 6. 函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#61-%E6%A6%82%E8%BF%B0"><span class="toc-number">1.6.1.</span> <span class="toc-text"> 6.1 概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#62-%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-number">1.6.2.</span> <span class="toc-text"> 6.2 函数的定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#63-%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8"><span class="toc-number">1.6.3.</span> <span class="toc-text"> 6.3 函数的调用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#64-%E5%80%BC%E4%BC%A0%E9%80%92"><span class="toc-number">1.6.4.</span> <span class="toc-text"> 6.4 值传递</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#65-%E5%87%BD%E6%95%B0%E7%9A%84%E5%B8%B8%E8%A7%81%E6%A0%B7%E5%BC%8F"><span class="toc-number">1.6.5.</span> <span class="toc-text"> 6.5 函数的常见样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#66-%E5%87%BD%E6%95%B0%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="toc-number">1.6.6.</span> <span class="toc-text"> 6.6 函数的声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#67-%E5%87%BD%E6%95%B0%E7%9A%84%E4%BB%BD%E6%96%87%E4%BB%B6%E7%BC%96%E5%86%99"><span class="toc-number">1.6.7.</span> <span class="toc-text"> 6.7 函数的份文件编写</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E6%8C%87%E9%92%88"><span class="toc-number">1.7.</span> <span class="toc-text"> 7. 指针</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#71-%E6%8C%87%E9%92%88%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.7.1.</span> <span class="toc-text"> 7.1 指针的基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#72-%E6%8C%87%E9%92%88%E5%8F%98%E9%87%8F%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E4%BD%BF%E7%94%A8"><span class="toc-number">1.7.2.</span> <span class="toc-text"> 7.2 指针变量的定义和使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#73-%E6%8C%87%E9%92%88%E6%89%80%E5%8D%A0%E7%94%A8%E5%86%85%E5%AD%98%E7%A9%BA%E9%97%B4"><span class="toc-number">1.7.3.</span> <span class="toc-text"> 7.3 指针所占用内存空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#74-%E7%A9%BA%E6%8C%87%E9%92%88%E5%92%8C%E9%87%8E%E6%8C%87%E9%92%88"><span class="toc-number">1.7.4.</span> <span class="toc-text"> 7.4 空指针和野指针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#75-const%E4%BF%AE%E9%A5%B0%E6%8C%87%E9%92%88"><span class="toc-number">1.7.5.</span> <span class="toc-text"> 7.5 const 修饰指针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#76-%E6%8C%87%E9%92%88%E5%92%8C%E6%95%B0%E7%BB%84"><span class="toc-number">1.7.6.</span> <span class="toc-text"> 7.6 指针和数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#77-%E6%8C%87%E9%92%88%E5%92%8C%E5%87%BD%E6%95%B0"><span class="toc-number">1.7.7.</span> <span class="toc-text"> 7.7 指针和函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#78-%E6%8C%87%E9%92%88-%E6%95%B0%E7%BB%84-%E5%87%BD%E6%95%B0"><span class="toc-number">1.7.8.</span> <span class="toc-text"> 7.8 指针、数组、函数</span></a></li></ol></li></ol></li></ol></div><div class="related panel pjax" data-title="Related"></div><div class="overview panel" data-title="Overview"><div class="author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><img class="image" itemprop="image" alt="illusory" data-src="/assets/avatar.jpg"/><p class="name" itemprop="name">illusory</p><div class="description" itemprop="description">Starlight spread the universe</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">2</span><span class="name">posts</span></a></div></nav><div class="social"><a href="https://github.com/name" title="https:&#x2F;&#x2F;github.com&#x2F;name" class="item github" rel="noopener" target="_blank"><i class="ic i-github"></i></a></div><div class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>Home</a></li><li class="item dropdown"><a href="javascript:void(0);"><i class="ic i-user"></i>About</a><ul class="submenu"><li class="item"><a href="/about/" rel="section"><i class="ic i-user"></i>About the Website</a></li><li class="item"><a href="/admiration/" rel="section"><i class="ic i-coffee"></i>Appreciation to author</a></li></ul></li><li class="item dropdown"><a href="javascript:void(0);"><i class="ic i-feather"></i>Posts</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>Categories</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>Tags</a></li></ul></li><li class="item"><a href="/friends/" rel="section"><i class="ic i-heart"></i>Friends</a></li></div></div></div></div><ul id="quick"><li class="prev pjax"></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/2023/04/03/hello-world/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>Random Posts</h2><ul><li class="item"><div class="breadcrumb"></div><span><a href="/2023/04/03/c-base-learn/">c++base_learn</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/2023/04/03/hello-world/">Hello World</a></span></li></ul></div><div class="rpost pjax"><h2>最新评论</h2><ul class="leancloud-recent-comment" id="new-comment"></ul></div></div><div class="status"><div class="copyright">&copy; 2022 -<span itemprop="copyrightYear">2023</span><span class="with-love"><i class="ic i-sakura rotate"></i></span><span class="author" itemprop="copyrightHolder">illusory @ testName</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i></span><span title="Symbols count total">6k words</span><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="ic i-coffee"></i></span><span title="Reading time total">6 mins.</span></div><div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & Theme.<a href="https://github.com/zkz098/hexo-theme-shokaX/" rel="noopener" target="_blank">ShokaX</a></div></div></div></footer></div><script data-config type="text/javascript" >var LOCAL = {path: "2023/04/03/c-base-learn/",  favicon: {show: '（●´3｀●）Goooood',hide: '(´Д｀)Booooom'   },
+</script></div><div class="reward"><button><i class="ic i-heartbeat"></i>Donate</button><p>Give me a cup of [coffee]~(￣▽￣)~*</p><div id="qr"><div><img data-src="/assets/wechatpay.png" alt="illusory WeChat Pay"/><p>WeChat Pay</p></div><div><img data-src="/assets/alipay.png" alt="illusory Alipay"/><p>Alipay</p></div></div></div><div id="copyright"><ul><li class="author"><strong>Post author: </strong>illusory<i class="ic i-at"><em>@</em></i>illusory</li><li class="link"><strong>Post link: </strong><a href="https://killer1214.github.io/2023/04/03/c-base-learn/" title="c++base_learn">https://killer1214.github.io/2023/04/03/c-base-learn/</a></li><li class="license"><strong>Copyright Notice: </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</a> unless stating additionally.</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/2023/04/03/hello-world/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipetv6p75j20zk0m8x6p.jpg" title="Hello World"><span class="type">Previous Post</span><span class="category"><i class="ic i-flag"></i>undefined</span><h3>Hello World</h3></a></div><div class="item right"></div></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="Contents"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#c%E5%9F%BA%E7%A1%80"><span class="toc-number">1.</span> <span class="toc-text"> c++ 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1c%E4%BA%86%E8%A7%A3"><span class="toc-number">1.1.</span> <span class="toc-text"> 1.c++ 了解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.2.</span> <span class="toc-text"> 2. 数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#25-%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="toc-number">1.2.1.</span> <span class="toc-text"> 2.5 转义字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#26%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9E%8B"><span class="toc-number">1.2.2.</span> <span class="toc-text"> 2.6 字符串型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1c%E9%A3%8E%E6%A0%BC%E5%AD%97%E7%AC%A6%E4%B8%B2char-%E5%8F%98%E9%87%8F%E5%90%8D-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%80%BC"><span class="toc-number">1.2.2.1.</span> <span class="toc-text"> 1.C 风格字符串： char 变量名[] &#x3D; &quot;字符串值&quot;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2c%E9%A3%8E%E6%A0%BC%E5%AD%97%E7%AC%A6%E4%B8%B2string-%E5%8F%98%E9%87%8F%E5%90%8D-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%80%BC"><span class="toc-number">1.2.2.2.</span> <span class="toc-text"> 2.c++ 风格字符串： string 变量名 &#x3D; &quot;字符串值&quot;</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#27%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8Bbool"><span class="toc-number">1.2.3.</span> <span class="toc-text"> 2.7 布尔类型 bool</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#28%E6%95%B0%E6%8D%AE%E7%9A%84%E8%BE%93%E5%85%A5"><span class="toc-number">1.2.4.</span> <span class="toc-text"> 2.8 数据的输入</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.3.</span> <span class="toc-text"> 3. 运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#31%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.3.1.</span> <span class="toc-text"> 3.1 算数运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#32%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.3.2.</span> <span class="toc-text"> 3.2 赋值运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#33%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.3.3.</span> <span class="toc-text"> 3.3 比较运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#34%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.3.4.</span> <span class="toc-text"> 3.4 逻辑运算符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E7%A8%8B%E5%BA%8F%E6%B5%81%E7%A8%8B%E7%BB%93%E6%9E%84"><span class="toc-number">1.4.</span> <span class="toc-text"> 4. 程序流程结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#41%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84"><span class="toc-number">1.4.1.</span> <span class="toc-text"> 4.1 选择结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#411-if%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.4.1.1.</span> <span class="toc-text"> 4.1.1 if 语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#412%E4%B8%89%E7%9B%AE%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.4.1.2.</span> <span class="toc-text"> 4.1.2 三目运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#413switch%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.4.1.3.</span> <span class="toc-text"> 4.1.3switch 语句</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#42%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="toc-number">1.4.2.</span> <span class="toc-text"> 4.2 循环结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#421while%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.4.2.1.</span> <span class="toc-text"> 4.2.1while 循环语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#422-dowhile%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.4.2.2.</span> <span class="toc-text"> 4.2.2 do...while 循环语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#423-for%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.4.2.3.</span> <span class="toc-text"> 4.2.3 for 循环语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#424%E5%B5%8C%E5%A5%97%E5%BE%AA%E7%8E%AF"><span class="toc-number">1.4.2.4.</span> <span class="toc-text"> 4.2.4 嵌套循环</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#43%E8%B7%B3%E8%BD%AC%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.4.3.</span> <span class="toc-text"> 4.3 跳转语句</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#431-break%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.4.3.1.</span> <span class="toc-text"> 4.3.1 break 语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#432-continue%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.4.3.2.</span> <span class="toc-text"> 4.3.2 continue 语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#433-goto%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.4.3.3.</span> <span class="toc-text"> 4.3.3 goto 语句</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%95%B0%E7%BB%84"><span class="toc-number">1.5.</span> <span class="toc-text"> 5 数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#51-%E6%A6%82%E8%BF%B0"><span class="toc-number">1.5.1.</span> <span class="toc-text"> 5.1 概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#52-%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="toc-number">1.5.2.</span> <span class="toc-text"> 5.2 一维数组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#521-%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84%E5%AE%9A%E4%B9%89%E6%96%B9%E5%BC%8F"><span class="toc-number">1.5.2.1.</span> <span class="toc-text"> 5.2.1 一维数组定义方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#522-%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84%E6%95%B0%E7%BB%84%E5%90%8D"><span class="toc-number">1.5.2.2.</span> <span class="toc-text"> 5.2.2 一维数组数组名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#523-%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F"><span class="toc-number">1.5.2.3.</span> <span class="toc-text"> 5.2.3 冒泡排序</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#53-%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="toc-number">1.5.3.</span> <span class="toc-text"> 5.3 二维数组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#531-%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E5%AE%9A%E4%B9%89%E6%96%B9%E5%BC%8F"><span class="toc-number">1.5.3.1.</span> <span class="toc-text"> 5.3.1 二维数组定义方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#532-%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E6%95%B0%E7%BB%84%E5%90%8D"><span class="toc-number">1.5.3.2.</span> <span class="toc-text"> 5.3.2 二维数组数组名</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E5%87%BD%E6%95%B0"><span class="toc-number">1.6.</span> <span class="toc-text"> 6. 函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#61-%E6%A6%82%E8%BF%B0"><span class="toc-number">1.6.1.</span> <span class="toc-text"> 6.1 概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#62-%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-number">1.6.2.</span> <span class="toc-text"> 6.2 函数的定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#63-%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8"><span class="toc-number">1.6.3.</span> <span class="toc-text"> 6.3 函数的调用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#64-%E5%80%BC%E4%BC%A0%E9%80%92"><span class="toc-number">1.6.4.</span> <span class="toc-text"> 6.4 值传递</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#65-%E5%87%BD%E6%95%B0%E7%9A%84%E5%B8%B8%E8%A7%81%E6%A0%B7%E5%BC%8F"><span class="toc-number">1.6.5.</span> <span class="toc-text"> 6.5 函数的常见样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#66-%E5%87%BD%E6%95%B0%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="toc-number">1.6.6.</span> <span class="toc-text"> 6.6 函数的声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#67-%E5%87%BD%E6%95%B0%E7%9A%84%E4%BB%BD%E6%96%87%E4%BB%B6%E7%BC%96%E5%86%99"><span class="toc-number">1.6.7.</span> <span class="toc-text"> 6.7 函数的份文件编写</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E6%8C%87%E9%92%88"><span class="toc-number">1.7.</span> <span class="toc-text"> 7. 指针</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#71-%E6%8C%87%E9%92%88%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.7.1.</span> <span class="toc-text"> 7.1 指针的基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#72-%E6%8C%87%E9%92%88%E5%8F%98%E9%87%8F%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E4%BD%BF%E7%94%A8"><span class="toc-number">1.7.2.</span> <span class="toc-text"> 7.2 指针变量的定义和使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#73-%E6%8C%87%E9%92%88%E6%89%80%E5%8D%A0%E7%94%A8%E5%86%85%E5%AD%98%E7%A9%BA%E9%97%B4"><span class="toc-number">1.7.3.</span> <span class="toc-text"> 7.3 指针所占用内存空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#74-%E7%A9%BA%E6%8C%87%E9%92%88%E5%92%8C%E9%87%8E%E6%8C%87%E9%92%88"><span class="toc-number">1.7.4.</span> <span class="toc-text"> 7.4 空指针和野指针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#75-const%E4%BF%AE%E9%A5%B0%E6%8C%87%E9%92%88"><span class="toc-number">1.7.5.</span> <span class="toc-text"> 7.5 const 修饰指针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#76-%E6%8C%87%E9%92%88%E5%92%8C%E6%95%B0%E7%BB%84"><span class="toc-number">1.7.6.</span> <span class="toc-text"> 7.6 指针和数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#77-%E6%8C%87%E9%92%88%E5%92%8C%E5%87%BD%E6%95%B0"><span class="toc-number">1.7.7.</span> <span class="toc-text"> 7.7 指针和函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#78-%E6%8C%87%E9%92%88-%E6%95%B0%E7%BB%84-%E5%87%BD%E6%95%B0"><span class="toc-number">1.7.8.</span> <span class="toc-text"> 7.8 指针、数组、函数</span></a></li></ol></li></ol></li></ol></div><div class="related panel pjax" data-title="Related"></div><div class="overview panel" data-title="Overview"><div class="author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><img class="image" itemprop="image" alt="illusory" data-src="/assets/avatar.jpg"/><p class="name" itemprop="name">illusory</p><div class="description" itemprop="description">Starlight spread the universe</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">2</span><span class="name">posts</span></a></div></nav><div class="social"><a href="https://github.com/name" title="https:&#x2F;&#x2F;github.com&#x2F;name" class="item github" rel="noopener" target="_blank"><i class="ic i-github"></i></a></div><div class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>Home</a></li><li class="item dropdown"><a href="javascript:void(0);"><i class="ic i-user"></i>About</a><ul class="submenu"><li class="item"><a href="/about/" rel="section"><i class="ic i-user"></i>About the Website</a></li><li class="item"><a href="/admiration/" rel="section"><i class="ic i-coffee"></i>Appreciation to author</a></li></ul></li><li class="item dropdown"><a href="javascript:void(0);"><i class="ic i-feather"></i>Posts</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>Categories</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>Tags</a></li></ul></li><li class="item"><a href="/friends/" rel="section"><i class="ic i-heart"></i>Friends</a></li></div></div></div></div><ul id="quick"><li class="prev pjax"></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/2023/04/03/hello-world/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>Random Posts</h2><ul><li class="item"><div class="breadcrumb"></div><span><a href="/2023/04/03/hello-world/">Hello World</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/2023/04/03/c-base-learn/">c++base_learn</a></span></li></ul></div><div class="rpost pjax"><h2>最新评论</h2><ul class="leancloud-recent-comment" id="new-comment"></ul></div></div><div class="status"><div class="copyright">&copy; 2022 -<span itemprop="copyrightYear">2023</span><span class="with-love"><i class="ic i-sakura rotate"></i></span><span class="author" itemprop="copyrightHolder">illusory @ testName</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i></span><span title="Symbols count total">6k words</span><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="ic i-coffee"></i></span><span title="Reading time total">6 mins.</span></div><div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & Theme.<a href="https://github.com/zkz098/hexo-theme-shokaX/" rel="noopener" target="_blank">ShokaX</a></div></div></div></footer></div><script data-config type="text/javascript" >var LOCAL = {path: "2023/04/03/c-base-learn/",  favicon: {show: '（●´3｀●）Goooood',hide: '(´Д｀)Booooom'   },
    search: {placeholder: "Search for Posts",empty: "We didn't find any results for the search: ${query}",stats: "${hits} results found in ${time} ms"   },valine: true,fancybox: true,copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',outime: true,template: `<div class="note warning"><p><span class="label warning">Article Timeliness Alert</span><br>This is an article published {{publish}} days ago and last updated {{updated}} days ago. Some information may have changed, so please be careful to screen it.</p></div>`,ignores : [
   function(uri) {
       return uri.includes('#');
