@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://killer1214.github.io</id>
+    <title>时光∞记忆碎片 • Posts by &#34;整理&#34; tag</title>
+    <link href="https://killer1214.github.io" />
+    <updated>2023-04-05T13:34:54.000Z</updated>
+    <category term="c++学习" />
+    <category term="整理" />
+    <entry>
+        <id>https://killer1214.github.io/2023/04/05/%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86/</id>
+        <title>零碎知识</title>
+        <link rel="alternate" href="https://killer1214.github.io/2023/04/05/%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86/"/>
+        <content type="html">&lt;h1 id=&#34;1-git的使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-git的使用&#34;&gt;#&lt;/a&gt; 1. git 的使用&lt;/h1&gt;
+&lt;h2 id=&#34;11-用于版本管理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#11-用于版本管理&#34;&gt;#&lt;/a&gt; 1.1 用于版本管理&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;初始化&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git init&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在目标文件夹下打开 git bash，通过 git init 初始化一个隐藏文件夹，用于存放相关信息&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;版本维护和更新&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git add .&lt;/code&gt; // 将全部文件加载到暂存区（可以使用 tab 进行选择指定文件 / 文件夹）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git commit -m &amp;quot;注释&amp;quot;&lt;/code&gt; // 将暂存区的文件更新到.git 文件夹下，并进行注释说明&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;版本回退&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git checkout HEAD [文件]&lt;/code&gt; // 将指定文件回退到上次提交的版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git reset HEAD^&lt;/code&gt; // 回退所有内容到上一个版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git reset --soft HEAD&lt;/code&gt; // 用于回退到某个版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;HEAD 说明：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;HEAD 表示当前版本，即上次提交的版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HEAD^ 表示上一个版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HEAD^^ 上上一个版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;或者使用～数字表示&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;HEAD~0  表示当前&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HEAD~1  上一版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HEAD~2  上上一个版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="整理" />
+        <updated>2023-04-05T13:34:54.000Z</updated>
+    </entry>
+</feed>
